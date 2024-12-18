@@ -43,7 +43,7 @@ INSTRUCTION = f"""1. OUTPUT: choose a folder where you want the tool to save all
 
 def open_readme():
     """Opens the user documentation link in a web browser."""
-    webbrowser.open("https://github.com/Teaiscoldagain/StardewUtilities/blob/main/README.md")
+    webbrowser.open("https://github.com/Teaiscoldagain/StardewUtilities/tree/main/RecolorTool")
 
 
 

@@ -1,7 +1,6 @@
 datetime==5.5 ; python_version >= "3.13" and python_version < "4.0"
 numpy==2.2.0 ; python_version >= "3.13" and python_version < "4.0"
 pandas==2.2.3 ; python_version >= "3.13" and python_version < "4.0"
-pathlib==1.0.1 ; python_version >= "3.13" and python_version < "4.0"
 pillow==11.0.0 ; python_version >= "3.13" and python_version < "4.0"
 pyasn1==0.6.1 ; python_version >= "3.13" and python_version < "4"
 pysimplegui==5.0.7 ; python_version >= "3.13" and python_version < "4.0"

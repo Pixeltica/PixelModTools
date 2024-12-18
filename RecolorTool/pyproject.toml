@@ -13,7 +13,6 @@ pysimplegui = "^5.0.7"
 pillow = "^11.0.0"
 pandas = "^2.2.3"
 datetime = "^5.5"
-pathlib = "^1.0.1"
 
 
 [build-system]
