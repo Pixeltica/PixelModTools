@@ -3,8 +3,7 @@ import os
 import shutil
 import pandas as pd
 from PIL import Image
-from pathlib import Path
-
+from pathlib import Path as p
 
 def get_hex_color(r, g, b):
     """Converts RGB color values to a hexadecimal color code.
@@ -32,7 +31,7 @@ def create_color_map(image_path, output_path):
     # Backup existing color_map.csv if it exists (regardless of origin)
     if os.path.exists(output_path):
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        archive_path = Path(os.path.join(archive_dir, f'color_map_{timestamp}.csv'))
+        archive_path = p(os.path.join(archive_dir, f'color_map_{timestamp}.csv'))
         shutil.copy2(output_path, archive_path)
         print(f"Existing color map backed up to {archive_path}")
 
@@ -51,7 +50,7 @@ def create_color_map(image_path, output_path):
 
         df = pd.DataFrame(data)
         df.to_csv(output_path, index=False)
-        formatted_output_path = Path(output_path)
+        formatted_output_path = p(output_path)
         print(f"CSV file '{formatted_output_path}' created.")
 
     except FileNotFoundError:

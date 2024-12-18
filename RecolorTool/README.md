@@ -24,12 +24,13 @@ As this tool is in early development stages I would really appreciate any feedba
 
 ## Getting Started
 
-You can download a Windows OS executable version from latest releases, or download/fork the repo and extract the Recolor Tool directory to run the Python code in your own environment setup.
+You can download a Windows OS executable version from latest releases, or download/fork the repo and extract the Recolor Tool directory to run the Python code in your own environment setup. pyproject.toml / requirements.txt have been generated to make this easier.
 
 ### Using the Windows Executable
 
-1. Download the latest release from the [Releases](https://github.com/Teaiscoldagain/StardewUtilities/releases) page. 2. Extract the downloaded ZIP archive to a location of your choice.
-2. Run the `ImageRecolorTool.exe` executable.
+1. Find the latest release of the Image Recolor Tool at [Releases](https://github.com/Teaiscoldagain/StardewUtilities/releases). 
+2. Donwload to a location of your choice.
+3. Run the `ImageRecolorTool.exe` executable.
 
 ## Usage
 

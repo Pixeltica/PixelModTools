@@ -3,7 +3,7 @@ import os
 import shutil
 import pandas as pd
 from PIL import Image
-from pathlib import Path
+from pathlib import Path as p
 
 
 def load_color_mappings(colormap_path):
@@ -72,7 +72,7 @@ def swap_colors(colormap_path, recolor_base_file, recolor_output_path):
                     pixels[i, j] = (new_r, new_g, new_b, a)
 
         original_filename = os.path.basename(recolor_base_file)
-        new_image_path = Path(os.path.join(recolor_dir, f"{prefix}_{original_filename}"))
+        new_image_path = p(os.path.join(recolor_dir, f"{prefix}_{original_filename}"))
         image.save(new_image_path)
         print(f"Modified image saved as {new_image_path}")
         generated_images.append(new_image_path)
@@ -107,13 +107,13 @@ def create_allinone(base_image_path, image_paths, output_directory, archive_dir)
         y = (index // num_columns) * img_height
         allinone_image.paste(img, (x, y))
 
-    allinone_image_path = Path(os.path.join(output_directory, 'all_in_one.png'))
+    allinone_image_path = p(os.path.join(output_directory, 'all_in_one.png'))
     allinone_image.save(allinone_image_path)
     print(f"Combined recolor saved as {allinone_image_path}")
 
     # Save a timestamped copy to the archive
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    archive_path = Path(os.path.join(archive_dir, f'all_in_one_{timestamp}.png'))
+    archive_path = p(os.path.join(archive_dir, f'all_in_one_{timestamp}.png'))
     allinone_image.save(archive_path)
     print(f"Archived combined recolor saved as {archive_path}")
 
