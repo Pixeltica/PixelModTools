@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "recolortool"
+version = "0.1.0"
+description = "Tool for recoloring PNG images."
+authors = ["Teaiscoldagain <teaiscoldagain@gmail.com>"]
+license = "MIT"
+package-mode = false
+# readme = "README.md"  # Optional
+
+[tool.poetry.dependencies]
+python = "^3.13"
+pysimplegui = "^5.0.7"
+pillow = "^11.0.0"
+pandas = "^2.2.3"
+datetime = "^5.5"
+pathlib = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
