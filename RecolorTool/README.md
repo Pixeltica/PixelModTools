@@ -8,6 +8,9 @@ The Image Recolor Tool is a Python-based application designed to generate recolo
   <img src="https://file.garden/Zs9EmlqO7HRDxNhn/tica.github/image_recolor_tool_gui_v1" alt="Tool Interface" width="75%" height="75%">
 </div>
 
+## Prerequisites
+- To support the user interface you may need to install PySimpleGUI (the app will prompt for it if needed) this is a free tool and does not require license for personal use
+
 ## Features
 
 - Recolor PNG images using a CSV color map.
