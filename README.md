@@ -27,13 +27,17 @@ This repository contains a collection of tools and utilities for Stardew Valley 
 
 **Next Release (v0.2.0 - Target: End of Jan25):**
 
+*   Rework gui into PySide6 Framework for no installation executable package if possible
 *   Color map input image structure validation and warnings
-*   Batch image recolors (for example for AT or FF individual textures - currently only single file selection is supported)
+*   Color map input dynamic size selection (e.g. 1px by 1px vs 4px by 4px, etc)
+*   Configuration for all-in-one image structure (choose number of columns/rows)
 *   Video user guide
 *   UI enhancements for clarify and readability
+*   [stretch goal] include image to image color map generation (providing two identical images to scrape color mappings)
 
 **Future Enhancements:**
 
+*   Batch image recolors (for example for AT or FF individual textures - currently only single file selection is supported)
 *  Ready-made vanilla recolor palettes for one-click use
 *  Framework / Opt-in for recolor authors to provide color palettes to allow creators to quickly create compatible versions of their content (terrain tilesheets, interiors, furniture, other asset, etc) 
 *  Persistent color palette naming and retention for simpler re-use across projects
