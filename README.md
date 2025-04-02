@@ -1,9 +1,11 @@
-# Stardew Utilities
+# Pixel Mod Tools App
 
 > [!NOTE]
-**v0.1.0-alpha.1** of the Recolor Tool Windows one-file executable is available in releases: 
-https://github.com/Teaiscoldagain/StardewUtilities/releases/tag/v0.1.0-alpha.1
+**v0.2.0-alpha.1** is in the final stages of refactoring - user interface, as well as some of the tools code, has been completely rewritten. Once complete and ready for release the old tool will be completely retired as the license conditions for the previous interface framework have changed and no longer allow free hobbyist use. The new app will fall under LGPL license, which will be reflected on this repository on update.
 > 
+
+
+
 
 This repository contains a collection of tools and utilities for Stardew Valley mod authors. Written primarily in Python, most will include a graphical user interface and a packaged executable (currently supporting Windows only).
 
