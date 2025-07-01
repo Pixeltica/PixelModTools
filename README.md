@@ -4,6 +4,11 @@
 > A new version is in the works - user interface, as well as some of the tools code, has been completely rewritten. A temporary web-app version has been released with almost identical functionality until the refactored app is ready to be published.
 > 
 
+
+![recolortool_webapp](https://github.com/user-attachments/assets/47b19aa6-74a1-41d4-8633-b75ca92c9e9c)
+
+
+
 ## Summary
 
 > [!Important]
