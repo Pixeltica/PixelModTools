@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Map & Recolor Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+	<div>
+	<button type="button" class="startover-button" 
+	onclick="document.getElementById('color-map-form').reset(); 
+				document.getElementById('recolor-form').reset(); 
+				window.location.href='/start_over'">  
+	Start Over
+	</button></div>
+
+  <h2>Color Map Generator</h2>
+  <form method="POST" enctype="multipart/form-data" id="color-map-form">
+    <div>
+      <label for="map_input_file" class="custom-file-upload">
+        <span id="map-input-file-text">Upload PNG Image for Color Map</span> </label>
+      <input type="file" name="map_input_file" id="map_input_file" 
+             onchange="updateButtonText('map-input-file-text', this.files)">
+      {% if map_input_file_error %}
+      <p class="error">{{ map_input_file_error }}</p>
+      {% endif %}
+    </div>
+
+    <button type="submit">Generate Color Map</button>
+
+    {% if csv_filename %}
+    <p>Color map generated successfully!</p>
+    <a href="{{ url_for('download', filename='color_map.csv') }}" class="download-button"> Download Color Map CSV </a>
+    {% endif %}
+  </form>
+
+  <h2>Recolor Generator</h2>
+  <form method="POST" enctype="multipart/form-data" id="recolor-form">
+    <div>
+      <label for="recolor_base_file" class="custom-file-upload">
+        <span id="recolor-base-file-text">Upload Base PNG Image</span> </label>
+      <input type="file" name="recolor_base_file" id="recolor_base_file"
+             onchange="updateButtonText('recolor-base-file-text', this.files)">
+      {% if recolor_base_file_error %}
+      <p class="error">{{ recolor_base_file_error }}</p>
+      {% endif %}
+    </div>
+    <div>
+      <label for="color_map_file" class="custom-file-upload">
+        <span id="color-map-file-text">Upload Color Map CSV (Optional)</span> </label>
+      <input type="file" name="color_map_file" id="color_map_file"
+             onchange="updateButtonText('color-map-file-text', this.files)">
+      {% if color_map_file_error %}
+      <p class="error">{{ color_map_file_error }}</p>
+      {% endif %}
+    </div>
+
+    <button type="submit">Generate Recolors</button>
+
+    {% if zip_filename %}
+    <p>Recolors generated successfully!</p>
+    <a href="{{ url_for('download', filename='recolored_images.zip') }}" class="download-button"> Download Recolored
+      Images (ZIP) </a>
+    {% endif %}
+  </form>
+
+
+
+  <script>
+    function updateButtonText(spanId, files) {
+      const span = document.getElementById(spanId);
+      if (files.length > 0) {
+        span.textContent = files[0].name;
+      } else {
+        // Reset to default text if no file is chosen
+        switch (spanId) {
+          case 'map-input-file-text':
+            span.textContent = 'Upload PNG Image for Color Map';
+            break;
+          case 'recolor-base-file-text':
+            span.textContent = 'Upload Base PNG Image';
+            break;
+          case 'color-map-file-text':
+            span.textContent = 'Upload Color Map CSV (Optional)';
+            break;
+        }
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  background-color: #181818;
+  color: #e8e8e8;
+}
+
+h2 {
+  text-align: center;
+  color: #eee;
+}
+
+form {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #282828;
+}
+
+/* Styling for buttons and custom file upload */
+button[type="submit"],
+.download-button,
+.custom-file-upload {
+  display: block;
+  width: auto;
+  padding: 10px 20px;
+  border: 1px solid #555;
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline from download button */
+}
+
+button[type="submit"] {
+  width:100%;
+  background-color: #007bff; /* Blue background for Generate button */
+  border: none; /* Remove border for Generate button */
+}
+
+.download-button {
+  background-color: #007bff; /* Same as Generate button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+
+
+.custom-file-upload {
+  background-color: transparent; /* Transparent background for upload button */
+}
+
+/* Hide the default file input */
+#map_input_file, #recolor_base_file,#color_map_file  { 
+  display: none; 
+}
+
+
+div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.error {
+  color: #d9534f;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.startover-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 20px;
+  display: block;
+}
