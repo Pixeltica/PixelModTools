@@ -1,4 +1,4 @@
-# Pixel Mod Tools | Recolor Tool #
+# Recolor Tool #
 
 > [!NOTE]
 > A new version is in the works - user interface, as well as some of the tools code, has been completely rewritten. A temporary web-app version has been released with almost identical functionality until the refactored app is ready to be published.
